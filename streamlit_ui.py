@@ -102,7 +102,7 @@ def main():
         # Each entry: dict with 'role': 'user' or 'assistant', 'text': str
         st.session_state[KEY_HISTORY] = []
         # Add initial prompt as an assistant message
-        st.session_state[KEY_HISTORY].append({"role": "assistant", "text": INITIAL_PROMPT})
+        #st.session_state[KEY_HISTORY].append({"role": "assistant", "text": INITIAL_PROMPT})
 
     # Ensure the SQL agent is initialized
     ensure_agent()
