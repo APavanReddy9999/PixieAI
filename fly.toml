@@ -1,0 +1,35 @@
+app = "unknown-backend"
+
+[build]
+  image = "Dockerfile"
+
+[env]
+  PORT = "8080"
+  # Required
+
+
+[experimental]
+  allowed_public_ports = []
+  auto_rollback = true
+
+[deploy]
+  release_command = ""
+
+[services]
+  [[services.http]]
+    internal_port = 8080
+    protocol = "tcp"
+
+    [[services.http.ports]]
+      handlers = ["http"]
+      port = 80
+
+    [[services.http.ports]]
+      handlers = ["tls", "http"]
+      port = 443
+
+    [[services.tcp_checks]]
+      interval = 10000
+      timeout = 2000
+      grace_period = "10s"
+      restart_limit = 6

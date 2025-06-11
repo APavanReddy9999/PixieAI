@@ -1,0 +1,6 @@
+chainlit>=2.5.5
+google-genai>=1.19.0
+pymysql>=1.1.1
+python-dotenv>=1.1.0
+semantic-kernel[google]>=1.28.1
+

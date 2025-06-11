@@ -1,0 +1,8 @@
+{
+    "id": "raspy-moon-8200",
+    "type": "chainlit",
+      "ignore": [
+        ".venv/",
+        "__pycache__/"
+      ]
+}
